@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Allegiant Airlines</title>
+    <!--Meta Tags-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheets-->
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Javascripts-->
+    <script src="js/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- Navigation-->
+    <nav id="nav" role="navigation" class="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.html" class="navbar-brand"><img id="logo" src="images/logo.png" alt="Allegiant Airlines"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul role="list" class="nav navbar-nav navbar-right">
+            <li role="listitem"><a href="index.html#langs">Book Flight</a></li>
+            <li role="listitem"><a href="questions.html">Flight Status</a></li>
+            <li role="listitem"><a href="#">Check-In</a></li>
+            <li role="listitem"><a href="#">Book Hotel</a></li>
+            <li role="listitem"><a href="#">Rent A Car</a></li>
+            <li role="listitem"><a href="#">Help?</a></li>
+            <li role="listitem"><a id="logIn" href="#" role="button" class="btn-default">Log In</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="background"></div>
+    <!-- Welcome Form-->
+    <div class="row">
+      <div id="headlines" class="col-md-12">
+        <h2 id="welcomeH2">Welcome To Allegiant</h2>
+        <h3 id="welcomeH3">Let's cut the chit-chat and find you a flight!</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div id="form" class="col-md-12">
+        <form>
+          <div class="col-md-3"></div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <input id="leaving" type="text" placeholder="Where You Leaving From?" class="form-control">
+              <input id="when" type="text" placeholder="When you leaving?" class="form-control">
+              <input id="friends" type="text" placeholder="Taking any friends?" class="form-control">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <input id="where" type="text" placeholder="Where you going?" class="form-control">
+              <input id="comingBack" type="text" placeholder="When you coming back?" class="form-control">
+              <input id="kids" type="text" placeholder="Taking any kids?" class="form-control">
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+          <div class="col-md-12">
+            <button id="submit" type="submit" class="text-center center-block">Let's See What We Got!</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Check In Banner-->
+    <div class="row">
+      <div id="checkInBanner" class="col-md-12">
+        <div class="col-md-1"></div>
+        <div class="col-md-8">
+          <h3>Already booked a flight? Let's see if it is still on time yeah?</h3>
+        </div>
+        <div class="col-md-3 flexCenter">
+          <button class="text-center center-block">Check Flight Status</button>
+        </div>
+      </div>
+    </div>
+    <!-- Flights-->
+    <div id="flightsContainer" class="row">
+      <!-- JSON Data Goes Here-->
+    </div>
+    <div id="viewMore" class="row">
+      <div class="col-md-12">
+        <button id="viewMoreBTN" class="text-center center-block">View All Deals</button>
+      </div>
+      <div class="col-md-1"></div>
+      <div id="disclosure" class="col-md-10">
+        <p>Prices displayed are the lowest available per person, including taxes, carrier charges & government fees, and reflect payment by debit card. A surcharge (not to exceed $8 each way, per passenger) applies to credit card transactions to cover merchant costs of payment. Travelers paying by debit card may not have all of the consumer protections legally available to those paying by credit card in the event of a dispute. Optional baggage charges may apply. Fare rules, routes and schedules are subject to change without notice.</p>*$29 fare is available from Fresno to Phoenix/Mesa departing between 4/01/16 - 4/15/16. Seats are limited and fare is not available on all flights. Must be purchased by February 16, 2016. Price displayed includes taxes, carrier charges & government fees, and reflects payment by debit card. A surcharge (not to exceed $8 each way, per passenger) applies to credit card transactions to cover merchant costs of payment. Travelers paying by debit card may not have all of the consumer protections legally available to those paying by credit card in the event of a dispute. Optional baggage charges may apply. Fare rules, routes and schedules are subject to change without notice. Restrictions apply. Not valid on previously purchased itineraries.
+        **Airfare prices are per segment, include taxes, carrier charges & government fees, and reflect payment by debit card. Purchases by credit card subject to a surcharge not to exceed $8 each way per passenger to cover merchant costs of payment. Travelers paying by debit card may not have all of the consumer protections legally available to those paying by credit card in the event of a dispute. Must be purchased by February 16, 2016. Travel dates and fares are limited. A $14.99 per passenger, per segment fee applies to all bookings made through the Allegiant call center. Optional baggage charges may apply. Fare rules, routes and schedules are subject to change without notice. Restrictions apply. Not valid on previously purchased itineraries.
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <!-- Sign Up Banner-->
+    <div class="row">
+      <div id="emailBanner" class="col-md-12">
+        <form>
+          <div class="col-md-1"></div>
+          <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-6">
+              <input id="signUp" type="text" placeholder="Enter Email to Sign Up for our Newsletter!" class="form-control">
+            </div>
+            <div class="col-md-2 flexCenter">
+              <button id="signUpBTN" type="submit" class="text-left center-block">Sign Up!</button>
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+        </form>
+      </div>
+    </div>
+    <!-- Footer-->
+    <div id="footerbackground" class="col-md-12"></div>
+    <footer class="row">
+      <div id="footer" class="col-md-12">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <div class="col-md-2"><img src="images/footer_logo.png" class="img-responsive"></div>
+          <div class="col-md-2">
+            <h6 class="footerHeader">Company</h6><a href="#">About <br></a><a href="#">Press <br></a><a href="#">Investors <br></a><a href="#">Charters <br></a><a href="#">Contact Us <br></a>
+          </div>
+          <div class="col-md-2">
+            <h6 class="footerHeader">New Reservations</h6><a href="#">About <br></a><a href="#">Press <br></a><a href="#">Investors <br></a><a href="#">Charters <br></a><a href="#">Contact Us <br></a>
+          </div>
+          <div class="col-md-2">
+            <h6 class="footerHeader">Manage Travel</h6><a href="#">About <br></a><a href="#">Press <br></a><a href="#">Investors <br></a><a href="#">Charters <br></a><a href="#">Contact Us <br></a>
+          </div>
+          <div class="col-md-2">
+            <h6 class="footerHeader">Terms & Legal</h6><a href="#">About <br></a><a href="#">Press <br></a><a href="#">Investors <br></a><a href="#">Charters <br></a><a href="#">Contact Us <br></a>
+          </div>
+          <div class="col-md-2">
+            <h6 class="footerHeader">Social</h6><a href="#">About <br></a><a href="#">Press <br></a><a href="#">Investors <br></a><a href="#">Charters <br></a><a href="#">Contact Us <br></a>
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </footer>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/functions.js"></script>
+  </body>
+</html>

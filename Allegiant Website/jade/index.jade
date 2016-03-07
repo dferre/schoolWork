@@ -1,0 +1,74 @@
+doctype html
+html
+  include includes/head.jade
+  body
+    // Navigation
+    include includes/nav.jade
+    
+    // Welcome Form
+    .row
+      .col-md-12#headlines
+        h2#welcomeH2 Welcome To Allegiant
+        h3#welcomeH3 Let's cut the chit-chat and find you a flight!
+    .row
+      .col-md-12#form
+        form
+          .col-md-3
+          .col-md-3
+            .form-group
+              input.form-control#leaving(type="text" placeholder="Where You Leaving From?")
+              input.form-control#when(type="text" placeholder="When you leaving?")
+              input.form-control#friends(type="text" placeholder="Taking any friends?")
+          .col-md-3
+            .form-group
+              input.form-control#where(type="text" placeholder="Where you going?")
+              input.form-control#comingBack(type="text" placeholder="When you coming back?")
+              input.form-control#kids(type="text" placeholder="Taking any kids?")
+          .col-md-3
+          .col-md-12
+            button.text-center.center-block#submit(type="submit") Let's See What We Got!
+    
+    // Check In Banner
+    .row
+      .col-md-12#checkInBanner
+        .col-md-1
+        .col-md-8
+          h3 Already booked a flight? Let's see if it is still on time yeah?
+        .col-md-3.flexCenter
+          button.text-center.center-block Check Flight Status
+          
+    // Flights
+    .row#flightsContainer
+      // JSON Data Goes Here
+    .row#viewMore
+      .col-md-12
+        button.text-center.center-block#viewMoreBTN View All Deals
+      .col-md-1
+      .col-md-10#disclosure
+        p Prices displayed are the lowest available per person, including taxes, carrier charges & government fees, and reflect payment by debit card. A surcharge (not to exceed $8 each way, per passenger) applies to credit card transactions to cover merchant costs of payment. Travelers paying by debit card may not have all of the consumer protections legally available to those paying by credit card in the event of a dispute. Optional baggage charges may apply. Fare rules, routes and schedules are subject to change without notice.
+
+        *$29 fare is available from Fresno to Phoenix/Mesa departing between 4/01/16 - 4/15/16. Seats are limited and fare is not available on all flights. Must be purchased by February 16, 2016. Price displayed includes taxes, carrier charges & government fees, and reflects payment by debit card. A surcharge (not to exceed $8 each way, per passenger) applies to credit card transactions to cover merchant costs of payment. Travelers paying by debit card may not have all of the consumer protections legally available to those paying by credit card in the event of a dispute. Optional baggage charges may apply. Fare rules, routes and schedules are subject to change without notice. Restrictions apply. Not valid on previously purchased itineraries.
+
+        **Airfare prices are per segment, include taxes, carrier charges & government fees, and reflect payment by debit card. Purchases by credit card subject to a surcharge not to exceed $8 each way per passenger to cover merchant costs of payment. Travelers paying by debit card may not have all of the consumer protections legally available to those paying by credit card in the event of a dispute. Must be purchased by February 16, 2016. Travel dates and fares are limited. A $14.99 per passenger, per segment fee applies to all bookings made through the Allegiant call center. Optional baggage charges may apply. Fare rules, routes and schedules are subject to change without notice. Restrictions apply. Not valid on previously purchased itineraries.
+      .col-md-1
+      
+    // Sign Up Banner
+    .row
+      .col-md-12#emailBanner
+        form
+          .col-md-1
+          .col-md-8.col-md-offset-2
+            .col-md-6
+              input.form-control#signUp(type="text" placeholder="Enter Email to Sign Up for our Newsletter!")
+            .col-md-2.flexCenter
+              button.text-left.center-block#signUpBTN(type="submit") Sign Up!
+          .col-md-3
+    
+    // Footer
+    include includes/footer.jade
+    script(src='js/functions.js')
+        
+        
+      
+          
+        

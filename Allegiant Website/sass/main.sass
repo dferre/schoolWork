@@ -1,0 +1,74 @@
+// Variables
+$blue: #00b3e3;
+$dark: #222222;
+$color: #949494;
+$light: #5e5f5f
+$green: #8bd35b;
+$border: 1px solid #ccc;
+$shadow: 0px 2px 7px 0px rgba(0,0,0,0.3);
+
+// Mixins
+@mixin Fade
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+
+@mixin flexCentr
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+// Imports
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,100italic,300italic,400italic,500italic)
+@import _nav.sass
+@import _footer.sass
+
+@import _index.sass
+// Rules
+
+body
+  background: #f5f5f5;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+
+h2
+  font-weight: 100;
+  font-size: 52px;
+h3
+  font-weight: 100
+  font-size: 28px
+
+.test
+  background: red
+  height: 215px;
+.test2
+  background: black
+  height: 215px;
+.test3
+  background: green
+  height: 215px;
+
+button
+  border-radius: 200px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 9px;
+  font-weight: 400;
+  background: $blue
+  box-shadow: $shadow
+  color: white
+  border: none;
+  font-size: 18px
+
+  &:hover
+    background: $dark;
+    color: white;
+    @include Fade
